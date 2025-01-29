@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
                 ssize_t bytes = read(events[i].data.fd, buf, sizeof(buf));
                 if (bytes < 0 && errno != EAGAIN)
                 {
-                    std::cerfr << "Error on read " << strerror(errno) << std::endl;
+                    std::cerr << "Error on read " << strerror(errno) << std::endl;
                     return 1;
                 }
 
